@@ -1,5 +1,5 @@
 Router.route('/chatting', 'chatting');
-/*
+
 Template.chatting.events({
     'keyup [name=send]': function(evt, tmpl) {
         if (evt.which === 13) {
@@ -10,8 +10,7 @@ Template.chatting.events({
             $("[name=send]").val('');
         }
     }
-});*/
-/*
+});
 
 Template.chatting.helpers({
     messages: function() {
@@ -19,4 +18,4 @@ Template.chatting.helpers({
         chattings = chattings.reverse();
         return Chatting.find().fetch().reverse();
     }
-});*/
+});
