@@ -1,5 +1,7 @@
 
-<template name="main">
+
+<template name="memo">
+
     <head>
         <title>JH's Homepage</title>
         <style>
@@ -22,7 +24,9 @@
                 text-align: center;
             }
             a { text-decoration: none; }
-            li { list-style: none; }
+            li { list-style: none;
+                font-size: large;
+                color: black}
         </style>
         <style>
             .pull-left { float: left; }
@@ -152,42 +156,19 @@
         </script>
     </head>
 
-    <body>
-    <header id="head">
-        <div class="main_button">
-            <br/>
-            <a href="/"><button type="button" class="btn btn-default"><b> Main </b></button></a>
-            {{> loginButtons}}
-            <br/><br/>
-        </div>
 
-        <a href="/"><img class="coverPhotoImg photo img" src="https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/c0.74.851.315/p851x315/1796009_571439829636779_436542820_o.jpg" style="top:0px;width:80%" data-fbid="571439829636779" alt="커버 사진">
-        </a>
-        <h1><b>JH's Homepage</b></h1>
+    <div class="main_button">
         <br/>
-        <div id="menu_list">
-            <nav id="main-navigation">
-                <ul class="outer-menu">
-                    <li><a href="/Profile"><h4><b> Profile </b></h4></a></li>
-                    <li><a href="/SNS"><h4><b> SNS </b></h4></a></li>
-                    <li><a href="/FavoriteVideo"><h4><b> Favorite Video </b></h4></a></li>
-                    <li><a href="/Board"><h4><b> Board </b></h4></a></li>
-                    <li><a href="#"><h4><b> Story </b></h4></a></li>
-                    <li><a href="/memo"><h4><b> Memo </b></h4></a></li>
-                    <li><a href="#"><h4><b> Like </b></h4></a></li>
-                    <li><a href="/Logs"><h4><b> Logs </b></h4></a></li>
-                    <li><a href="#"><h4><b> Etc </b></h4></a></li>
-                </ul>
-            </nav>
-        </div>
-        {{>fullcalendar}}
-        <p>"Good Afternoon! How are you feeling today?"</p>
-        <div class="button">
-            <button type="button" class="btn btn-primary"><b>Good {{Good}}</b></button>
-            <button type="button" class="btn btn-default"><b>So So{{So}}</b></button>
-            <button type="button" class="btn btn-danger"><b>Bad{{Bad}}</b></button>
-        </div>
-        <br/>
-    </header>
-    </body>
+        <a href="/"><button type="button" class="btn btn-default"><b> Main </b></button></a>
+        <br/><br/>
+    </div>
+    <br/>
+    <h3><b>Input Memo : </b><input name="send"/></h3>
+    <ul>
+        {{#each messages}}
+            <li>
+                {{sender}} <b> - </b> {{message}}
+            </li>
+        {{/each}}
+    </ul>
 </template>
