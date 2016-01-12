@@ -1,8 +1,6 @@
 
 Router.route('/BoardWrite', 'BoardWrite');
 
-
-
 Template.BoardWrite.events({
     //4
     "click #cancel": function(e, tmpl) {
