@@ -109,7 +109,7 @@
             }
             h4{
                 font-size: 25px;
-                color: #761c19;
+                color: black;
             }
             p{
                 font-weight: bold;
@@ -154,34 +154,42 @@
     <br/>
     <div class="main_button">
         <br/>
-        <a href="/"><button type="button" class="btn btn-default"><b> Main </b></button></a>
+        <a href="/"><button type="button" class="btn btn-default">
+            <h4><b><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Main</b></h4>
+        </button></a>
         <br/><br/>
     </div>
     <h3><b>- Board -</b></h3>
-
-    <a href="/BoardWrite" style="background-color: ">
+    <a href="/BoardWrite">
         <button class="btn btn-primary" id="lnk_write"> Write </button>
     </a>
     <br/><br/>
+    <input type="text" name="search" id="inpSearch"/>
+    <button id="btnSearch">검색</button>
     <table class="table table-hover">
-        <br/><br/>
         <thead>
         <tr>
-            <td><b>글번호</b></td>
-            <td><b>작성자</b></td>
-            <td><b>제목</b></td>
+            <td>글번호</td>
+            <td>작성자</td>
+            <td>제목</td>
+            <td>삭제</td>
+            <td>좋아요</td>
         </tr>
         </thead>
         <tbody>
+
         {{#each boards}}
             <tr>
                 <td>{{글번호}}</td>
                 <td>{{작성자}}</td>
                 <td><a href="/boardDetail/{{_id}}">{{제목}}</a></td>
-                <td><button count="{{글번호}}" id="removeOneItem">x</button></td>
+                <td><button class="btn btn-danger" count="{{글번호}}" id="removeOneItem">x</button></td>
+                <td><button id="btnLike" class="btn btn-{{likeColor}}"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button></td>
             </tr>
         {{/each}}
         </tbody>
     </table>
+    <button class="btn btn-info" id="Prev">Prev</button>
+    <button class="btn btn-primary" id="Next">Next</button>
     <br/>
 </template>

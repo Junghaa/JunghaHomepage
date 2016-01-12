@@ -108,9 +108,9 @@
                 margin-bottom: 2rem;
                 font-size: 34px;
             }
-            h4{
+            h4 {
                 font-size: 25px;
-                color: #761c19;
+                color: black;
             }
             p{
                 font-weight: bold;
@@ -156,7 +156,9 @@
     <header id="head">
         <div class="main_button">
             <br/>
-            <a href="/"><button type="button" class="btn btn-default"><b> Main </b></button></a>
+            <a href="/"><button type="button" class="btn btn-default">
+                <h4><b><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Main</b></h4>
+            </button></a>
             {{> loginButtons}}
             <br/><br/>
         </div>
@@ -181,6 +183,7 @@
             </nav>
         </div>
         {{>fullcalendar}}
+        <br/>
         <p>"Good Afternoon! How are you feeling today?"</p>
         <div class="button">
             <button type="button" class="btn btn-primary"><b>Good {{Good}}</b></button>

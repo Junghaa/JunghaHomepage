@@ -110,7 +110,7 @@
                 color: black;
                 margin-top: 0;
                 margin-bottom: 2rem;
-                font-size: 34px;
+                font-size: 25px;
             }
             h4{
                 font-size: 25px;
@@ -159,14 +159,28 @@
 
     <div class="main_button">
         <br/>
-        <a href="/"><button type="button" class="btn btn-default"><b> Main </b></button></a>
+        <a href="/"><button type="button" class="btn btn-default">
+            <h4><b><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Main</b></h4>
+        </button></a>
         <br/><br/>
     </div>
     <br/>
-    <h3><b>Input Memo : </b><input name="send"/></h3>
+
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge"><h3><b> Input Memo : </b></h3></label>
+            <div class="col-sm-10">
+                <input name="send" class="form-control">
+            </div>
+            <br/>
+            <br/>
+        </div>
+    <br/>
+    <br/>
+    <!--<h3><b>Input Memo : </b><input name="send"/></h3>-->
     <ul>
         {{#each messages}}
             <li>
+                <br/>
                 {{sender}} <b> - </b> {{message}}
             </li>
         {{/each}}

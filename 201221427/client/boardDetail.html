@@ -1,4 +1,4 @@
-<template name="SNS">
+<template name="boardDetail">
 
     <head>
         <title>JH's Homepage</title>
@@ -152,31 +152,18 @@
         </script>
     </head>
 
-    <div class="SNS">
-        <div class="main_button">
-            <br/>
-            <a href="/"><button type="button" class="btn btn-default">
-                <h4><b><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Main</b></h4>
-            </button></a>
-            <br/><br/>
-        </div>
-
-        <h3><b>- SNS -</b></h3>
-        <table class="table table-condensed">
-            <tbody>
-            <tr>
-                <td><h4><b>Naver blog</b></h4></td>
-                <td><h4><b><a href="http://blog.naver.com/bsd00297" title="Click!">http://blog.naver.com/bsd00297</a></b></h4></td>
-            </tr>
-            <tr>
-                <td><h4><b>Facebook</b></h4></td>
-                <td><h4><b><a href="https://www.facebook.com/Jparadise59" title="Click!">https://www.facebook.com/Jparadise59</a></b></h4></td>
-            </tr>
-            <tr>
-                <td><h4><b>Instagram</b></h4></td>
-                <td><h4><b><a href="https://www.instagram.com/junghaaaaaaa/" title="Click!">https://www.instagram.com/junghaaaaaaa/</a></b></h4></td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="well">
+        {{#with userObj}}
+            글번호: {{글번호}}<br>
+            작성자: {{작성자}}<br>
+            <article>
+                <header>
+                    {{제목}}
+                </header>
+                <main>
+                    {{본문}}
+                </main>
+            </article>
+        {{/with}}
     </div>
 </template>

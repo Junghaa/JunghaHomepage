@@ -41,6 +41,6 @@ Template.BoardWrite.events({
         $('#제목').val('');
         $('#본문').val('');
 
-        Router.go('/');
+        Router.go('/Board');
     }
 });
