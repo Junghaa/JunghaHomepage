@@ -1,0 +1,168 @@
+
+<template name="FavoriteVideo">
+    <head>
+        <title>JH's Homepage</title>
+        <style>
+            body{
+                background-color: goldenrod;
+                width: 960px; margin: 0 auto;
+            }
+            #menu_list{
+                background: white;
+                margin: 15px 0; padding: 10px 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+            }
+            #main-navigation {
+                margin-bottom: 20px;
+                height: 35px;
+            }
+            * {
+                font-family: 'Malgun Gotic', sans-serif;
+                text-align: center;
+            }
+            a { text-decoration: none; }
+            li { list-style: none; }
+        </style>
+        <style>
+            .pull-left { float: left; }
+            .pull-right { float:right; }
+        </style>
+        <style>
+            .outer-menu-item {
+                float: left;
+                position: relative;
+            }
+            .outer-menu-item:hover {
+                background: black;
+                color: white
+            }
+            .menu-title {
+                display: block;
+                height: 30px; line-height: 30px;
+                text-align: center;
+                padding: 5px 20px;
+            }
+            .inner-menu {
+                display: none;
+                position: absolute;
+                top: 40px; left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+                z-index: 1000;
+                text-align: center
+            }
+            .inner-menu-item > a {
+                display: block;
+                padding: 5px 10px;
+                color: black
+            }
+            .inner-menu-item > a:hover {
+                background: black;
+                color: white;
+            }
+        </style>
+        <style>
+            .search-bar {
+                height: 26px;
+                padding: 7px;
+            }
+            .input-search {
+                display: block;
+                float: left;
+                background-color: #FFFFFF;
+                border: 1px solid #CCCCCC;
+                border-radius: 15px 0 0 15px;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+                width: 120px; height: 24px;
+                padding: 0 0 0 10px;
+                font-size: 12px;
+                color: #555555;
+            }
+            .input-search:focus {
+                border-color: rgba(82, 168, 236, 0.8);
+                outline: 0;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            }
+            .input-search-submit {
+                display: block;
+                float: left;
+                width: 50px; height: 26px;
+                border-radius: 0 15px 15px 0;
+                border: 1px solid #CCCCCC;
+                margin-left: -1px;
+
+                vertical-align: top;
+                display: inline-block;
+            }
+        </style>
+        <style>
+            h1{
+                font-size: 5em;
+                color:black;
+            }
+            h2, h3 {
+                color: black;
+                margin-top: 0;
+                margin-bottom: 2rem;
+                font-size: 34px;
+            }
+            h4{
+                font-size: 25px;
+                color: #761c19;
+            }
+            p{
+                font-weight: bold;
+                color: indigo;
+                font-size: 2em;
+            }
+            div {
+                display: block;
+            }
+            ul{
+                display: block;
+                list-style-type: disc;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                -webkit-padding-start: 40px;
+            }
+            nav li {
+                list-style: none;
+                float: left;
+                line-height: 40px;
+                margin: 0 10px;
+            }
+            li {
+                display: list-item;
+                text-align: -webkit-match-parent;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.outer-menu-item').hover(function () {
+                    $(this).find('.inner-menu').show();
+                }, function () {
+                    $(this).find('.inner-menu').hide();
+                });
+            });
+        </script>
+    </head>
+
+    <div class="main_button">
+        <br/>
+        <a href="/"><button type="button" class="btn btn-default"><b> Main </b></button></a>
+        <br/><br/>
+    </div>
+    <h3><b>- Favorite Video</b></h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bGZZxgixkew" frameborder="0" allowfullscreen></iframe>
+    <br/>
+    <div class="button">
+        <a href="#" id="like"> I Love BIGBANG! {{likeCount}}</a>
+        <br/>
+    </div>
+    <br/>
+</template>
