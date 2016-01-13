@@ -18,7 +18,7 @@ Template.Board.onCreated(function() {
 
 });
 
-Template.Boardt.onRendered(function() {
+Template.Board.onRendered(function() {
     //3
     console.log('rendered');
     //$('.table > tbody > tr').click(function() {
