@@ -1,5 +1,4 @@
-
-<template name="main">
+<template name="ability">
     <head>
         <title>JH's Homepage</title>
         <style>
@@ -108,7 +107,7 @@
                 margin-bottom: 2rem;
                 font-size: 34px;
             }
-            h4 {
+            h4{
                 font-size: 25px;
                 color: black;
             }
@@ -152,45 +151,37 @@
         </script>
     </head>
 
-    <body>
-    <header id="head">
-        <div class="main_button">
-            <br/>
-            <a href="/"><button type="button" class="btn btn-default">
-                <h4><b><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Main</b></h4>
-            </button></a>
-            {{> loginButtons}}
-            <br/><br/>
-        </div>
+    <div class="main_button">
+        <br/>
+        <a href="/"><button type="button" class="btn btn-default">
+            <h4><b><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Main</b></h4>
+        </button></a>
+        <br/><br/>
+    </div>
 
-        <a href="/"><img class="coverPhotoImg photo img" src="https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/c0.74.851.315/p851x315/1796009_571439829636779_436542820_o.jpg" style="top:0px;width:80%" data-fbid="571439829636779" alt="커버 사진">
-        </a>
-        <h1><b>JH's Homepage</b></h1>
-        <br/>
-        <div id="menu_list">
-            <nav id="main-navigation">
-                <ul class="outer-menu">
-                    <li><a href="/Profile"><h4><b> Profile </b></h4></a></li>
-                    <li><a href="/SNS"><h4><b> SNS </b></h4></a></li>
-                    <li><a href="/FavoriteVideo"><h4><b> Favorite Groups </b></h4></a></li>
-                    <li><a href="/Board"><h4><b> Board </b></h4></a></li>
-                    <li><a href="#"><h4><b> Story </b></h4></a></li>
-                    <li><a href="/memo"><h4><b> Memo </b></h4></a></li>
-                    <li><a href="/ability"><h4><b> Ability </b></h4></a></li>
-                    <li><a href="/Logs"><h4><b> Logs </b></h4></a></li>
-                    <li><a href="#"><h4><b> Etc </b></h4></a></li>
-                </ul>
-            </nav>
+    <h3><b>- Ability -</b></h3>
+    <br/>
+    <img src="http://postfiles13.naver.net/20150419_60/djaak3309_1429401976585NnLnP_PNG/S5e31_Happy_Finn.png?type=w1" width="480" height="256" style="cursor: pointer;" id="20150419_60/djaak3309_1429401976585NnLnP_PNG/S5e31_Happy_Finn.png" onclick="popview(this, '90000003_00000000000000334CFD28FE')" alt="" class="_photoImage">
+    <br/><br/><br/>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+            <span class="sr-only">40% Complete (success)</span> English
         </div>
-        {{>fullcalendar}}
-        <br/>
-        <p>"Good Afternoon! How are you feeling today?"</p>
-        <div class="button">
-            <button type="button" class="btn btn-primary"><b>Good {{Good}}</b></button>
-            <button type="button" class="btn btn-default"><b>So So{{So}}</b></button>
-            <button type="button" class="btn btn-danger"><b>Bad{{Bad}}</b></button>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+            <span class="sr-only">20% Complete</span> Japanese
         </div>
-        <br/>
-    </header>
-    </body>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+            <span class="sr-only">60% Complete (warning)</span> Programming
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+            <span class="sr-only">80% Complete (danger)</span> Design
+        </div>
+    </div>
+    <br/>
 </template>
